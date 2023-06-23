@@ -35,7 +35,7 @@ const putProveedor=async(req, res=response)=>{
 
     let mensaje=''
     try {
-    await Proveedor.findOneAndUpdate({_id:body._id}, {Nit:body.Nit,Nombre: body.Nombre, Cantidad: body.Cantidad, Telefono: body.Telefono, Factura: body.Factura, Fecha: body.Fecha, Categoria: body.Categoria, Estado: body.Estado})
+    await Proveedor.findOneAndUpdate({_id:body._id}, {Nit:body.Nit,Nombre: body.Nombre, Cantidad: body.Cantidad, Telefono: body.Telefono, Factura: body.Factura, Fecha: body.Fecha, Estado: body.Estado})
         mensaje='Proveedor Actualizado'
 
     } catch (error) {
@@ -51,7 +51,7 @@ const deleteProveedor=async(req, res=response)=>{
 
     let mensaje=''
     try {
-        await Proveedor.findOneAndDelete({_id:body._id}, {Nit:body.Nit,Nombre: body.Nombre, Cantidad: body.Cantidad, Telefono: body.Telefono, Factura: body.Factura, Fecha: body.Fecha, Categoria: body.Categoria, Estado: body.Estado})
+        await Proveedor.findOneAndDelete({_id:body._id}, {Nit:body.Nit,Nombre: body.Nombre, Cantidad: body.Cantidad, Telefono: body.Telefono, Factura: body.Factura, Fecha: body.Fecha, Estado: body.Estado})
         mensaje='Proveedor Borrado'
 
     } catch (error) {
