@@ -37,10 +37,6 @@ const ProveedorSchema=Schema({
         type:Date,
         required: [true, 'La fecha es obligatoria'],
     },
-    Categoria:{
-        type:String,
-        required: [true, 'La categoria es obligatoria'],
-    },
     Estado:{
         type:String,
         enum:['Activo', 'Inactivo'],
