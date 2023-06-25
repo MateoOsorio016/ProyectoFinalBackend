@@ -15,7 +15,6 @@ const VentaSchema = Schema(
       IVA: {
         type: Number,
         required: [true, 'El IVA es obligatorio'],
-        min: [1, 'El IVA debe ser mayor a 0']
       },
       Total: {
         type: Number,
