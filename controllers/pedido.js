@@ -52,7 +52,7 @@ const deletePedido=async(req, res=response)=>{
     const body= req.body
     let mensaje=''
     try {
-        await Pedido.findOneAndDelete({_id:body._id}, {Nit:body.Nit, Proveedor:body.Proveedor, Producto:body.Producto, Cantidad: Body.Cantidad, Monto: Body.Monto, Total:body.Total, Fecha:body.Fecha, Factura:body.Factura, Estado:body.Estado})
+        await Pedido.findOneAndDelete({_id:body._id}, {Nit:body.Nit, Proveedor:body.Proveedor, Producto:body.Producto, Cantidad: body.Cantidad, Monto: body.Monto, Total:body.Total, Fecha:body.Fecha, Factura:body.Factura, Estado:body.Estado})
         mensaje='Pedido Eliminado'
     } catch (error) {
         mensaje=error
