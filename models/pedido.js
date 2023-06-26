@@ -31,7 +31,7 @@ const PedidoSchema=Schema({
         required:[true, "el factura es obligatorio"]
     },
     Total:{
-        type: number,
+        type: Number,
         min: [1, 'El total debe ser mayor a 0']
     },
     Estado:{
