@@ -58,7 +58,7 @@ const deleteVenta= async(req, res=response)=>{
     const body=req.body
     let mensaje=''
     try {
-        await Venta.findOneAndDelete({_id:body._id}, {Factura:body.Factura, Subtotal:body.Subtotal, IVA:body.IVA})
+        await Venta.findOneAndDelete({_id:body._id}, {Factura:body.Factura, Cliente: body.Cliente, Producto: body.Producto, Subtotal:body.Subtotal, IVA:body.IVA})
         mensaje='Venta eliminada'
         
     } catch (error) {
