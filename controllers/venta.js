@@ -43,7 +43,7 @@ const putVenta = async (req, res = response) => {
   
       await Venta.findOneAndUpdate(
         { _id: body._id },
-        { Factura: body.Factura, Subtotal: subtotal, IVA: iva, Total: total }
+        { Factura: body.Factura, Cliente: body.Cliente, Producto: body.Producto, Subtotal: subtotal, IVA: iva, Total: total }
       );
   
       mensaje = 'Venta actualizada correctamente';
