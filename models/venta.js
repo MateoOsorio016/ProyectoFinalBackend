@@ -7,6 +7,14 @@ const VentaSchema = Schema(
         unique: true,
         required: [true, 'La factura es obligatoria']
       },
+        Cliente:{
+            type: String,
+            required: [true, 'El cliente es obligatorio']
+        },
+        Producto:{
+        type: String,
+        required: [true, 'El producto es obligatorio']
+        },
       Subtotal: {
         type: Number,
         required: [true, 'El subtotal es obligatorio'],
