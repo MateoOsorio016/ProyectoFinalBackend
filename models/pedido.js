@@ -11,29 +11,37 @@ const PedidoSchema=Schema({
         required:[true, "el proveedor es obligatorio"]
     },
     Producto:{
-        type:String,
-        required:[true, "el prodcuto es obligatorio"]
+        type:String
     },
     Cantidad:{
         type:Number,
         required:[true, "la cantidad es obligatoria"]
     },
     Monto:{
-        type:Number,
-        required:[true, "El monto es obligatorio"]
+        type:Number
     },
     Fecha:{
         type:Date,
-        required:[true, "el fecha es obligatoria"]
+        default: new Date()
     },
     Factura:{
         type:String,
         required:[true, "el factura es obligatorio"]
     },
+        Telefono:{
+        type:Number,
+        required:[true, "el telefono es obligatorio"]
+    },
+    
     Total:{
         type: Number,
         min: [1, 'El total debe ser mayor a 0']
     },
+     Categoria:{
+        type:String,
+        enum:['Molido', 'Grano'],
+        required:[true, 'La categoria es obligatoria']
+    }
     Estado:{
         type:String,
         enum:['Activo', 'Inactivo'],
