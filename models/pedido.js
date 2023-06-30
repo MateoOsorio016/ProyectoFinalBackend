@@ -10,15 +10,9 @@ const PedidoSchema=Schema({
         type:String,
         required:[true, "el proveedor es obligatorio"]
     },
-    Producto:{
-        type:String
-    },
     Cantidad:{
         type:Number,
         required:[true, "la cantidad es obligatoria"]
-    },
-    Monto:{
-        type:Number
     },
     Fecha:{
         type:Date,
@@ -32,11 +26,6 @@ const PedidoSchema=Schema({
         type:Number,
         required:[true, "el telefono es obligatorio"]
     },
-    
-    Total:{
-        type: Number,
-        min: [1, 'El total debe ser mayor a 0']
-    },
      Categoria:{
         type:String,
         enum:['Molido', 'Grano'],
@@ -47,10 +36,5 @@ const PedidoSchema=Schema({
         enum:['Activo', 'Inactivo'],
         required:[true, 'El estado es obligatorio']
     }
-});
-    PedidoSchema.pre('save', function (next) {
-    
-    this.Total = this.Cantidad * this.Monto ; // Sumar el Subtotal y la cantidad del IVA al Subtotal
-    next();
 });
 module.exports = model('Pedido',PedidoSchema)
