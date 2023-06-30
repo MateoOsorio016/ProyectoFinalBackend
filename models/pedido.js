@@ -41,7 +41,7 @@ const PedidoSchema=Schema({
         type:String,
         enum:['Molido', 'Grano'],
         required:[true, 'La categoria es obligatoria']
-    }
+    },
     Estado:{
         type:String,
         enum:['Activo', 'Inactivo'],
