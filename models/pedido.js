@@ -6,7 +6,7 @@ const PedidoSchema=Schema({
         unique:true,
         required:[true, "el nit es obligatorio"]
     },
-    Proveedor:{
+    Cliente:{
         type:String,
         required:[true, "el proveedor es obligatorio"]
     },
